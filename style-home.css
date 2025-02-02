@@ -1,0 +1,491 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Roboto;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+#head-container{
+    display: flex;
+    height: max-content;
+    width: 100vw;
+    overflow-x:auto;
+    position: fixed;
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(255, 94, 0, 0.84)
+}
+#name,#srch-bar,#interact-area{
+    
+    border-radius: 10px;
+    color: white;
+    width: 33%;
+}
+#name{
+    display: flex;
+    justify-content: start;
+    align-self: center;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+} 
+#name p{
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: Aboreto; 
+    letter-spacing: 1em;
+}
+#name #s{
+    letter-spacing: 0.1em;
+}
+#srch-bar{
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: max-content;
+}
+#srch-bar:hover{
+    border: 1px solid rgb(255, 255, 255);
+}
+#srch-pad{
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    width: 60%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0;
+    font-weight: bolder;
+}
+#srch-pad::placeholder{
+    color: white;
+    letter-spacing: 0.2em;
+}
+#srch-button{
+    background: transparent;
+    border: none;
+    height: 15px;
+    width: 15px;
+}
+#srch-icon{
+    background: transparent;
+    border: none;
+    height: 15px;
+    width: 15px;
+}
+#interact-area{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+.nav-buttons{
+    color: white;
+    font-weight: bolder;
+    font-size: larger;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+}
+#body-container{
+    display: flex;
+    height:max-content;
+    width: 100vw;
+    margin-top:50px;
+}
+#dish-types{
+    height: 100vh ;
+    overflow-y: scroll;
+    width: 30%;
+    background: rgba(165, 165, 165, 0.304);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.types{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(97, 97, 97, 0.5), 0 6px 20px 0 rgba(97, 97, 97, 0.5);
+    background: linear-gradient(to right, rgba(173, 172, 172, 0.616), rgba(176, 176, 176, 0.498));
+}
+.listed-dish-pics{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 94, 0, 0.84);
+    background-size: cover;
+}
+#dinner{
+    background-image: url(images/Dinner.webp);
+}
+#healthy{
+    background-image: url(images/healthy.jpg);
+}
+#instant-pot{
+    background-image: url(images/Instant-pot.jpg);
+}
+#meal-prep{
+    background-image: url(images/meal\ Prep.jpg);
+}
+#quick_easy{
+    background-image: url(images/Quick&easy.jpg);
+}
+#salads{
+    background-image: url(images/salads.jpg);
+}
+#soups{
+    background-image: url(images/soups.jpg);
+}
+#vegan{
+    background-image: url(images/vegan.jpg);
+}
+#vegetarian{
+    background-image: url(images/vegetarian.webp);
+}
+.dish-link{
+    font-size: 16px;
+    color: rgba(255, 94, 0, 0.982);
+    letter-spacing: 0.05em;
+    font-weight: 900;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    border: 2px solid rgba(255, 94, 0, 0.982);
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: white;
+}
+.dish-link:hover{
+    background: rgba(255, 94, 0, 0.582);
+    color: white;
+    border-color: white;
+}
+#items{
+    height: 100vh;
+    overflow-y: scroll;
+    width: 40%;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+}
+#item-header{
+    justify-self: center;
+    align-self: center;
+    margin-top: 70px;
+    position: fixed;
+    top: 0px;
+    border-radius: 20px;
+    background: rgba(255, 94, 0, 0.84);
+    color: white;
+    letter-spacing: 0.03em;
+    font-size: 16px;
+    font-weight: 600;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#biriyani{
+    display: flex;
+    align-items: center;
+    margin-top: 70px;
+}
+.dish-pic{
+    border: 2px solid rgba(255, 94, 0, 0.84);
+    border-radius: 50%;
+    margin: 10px;
+}
+#biriyani-pic{
+    border: 2px solid rgba(255, 94, 0, 0.84);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: url(images/Biriyani.png);
+    background-size: cover;
+    background-clip: border-box;
+    float: inline-end;
+    margin: 2px;
+    padding: 5px;
+}
+#biriyani p{
+    width: 80%;
+    margin-left: 20px;
+    color: rgba(255, 94, 0, 0.84);
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+#biriyani a{
+    border: 1px solid white;
+    border-radius: 5px;
+    color: rgba(255, 94, 0, 0.84);
+    text-decoration: none;
+    height: max-content;
+}
+#paneer{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+#paneer-pic{
+    border: 2px solid rgba(255, 94, 0, 0.84);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: url(images/Butter-Paneer-prev.png);
+    background-size: cover;
+    background-clip: border-box;
+    float: inline-end;
+    margin: 2px;
+    
+}
+
+#paneer p{
+    width: 80%;
+    margin-right: 20px;
+    color: rgba(255, 94, 0, 0.84);
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    text-align: right;
+}
+
+#paneer a{
+    border: 1px solid white;
+    border-radius: 5px;
+    color: rgba(255, 94, 0, 0.84);
+    text-decoration: none;
+    height: max-content;
+}
+
+#momo{
+    display: flex;
+    align-items: center;
+}
+
+#momo-pic{
+    border: 2px solid rgba(255, 94, 0, 0.84);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: url(images/momo.png);
+    background-size: cover;
+    background-clip: border-box;
+    float: inline-end;
+    margin: 2px;
+    padding: 5px;
+}
+#momo p{
+    width: 80%;
+    margin-left: 20px;
+    color: rgba(255, 94, 0, 0.84);
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+#momo a{
+    border: 1px solid white;
+    border-radius: 5px;
+    color: rgba(255, 94, 0, 0.84);
+    text-decoration: none;
+    height: max-content;
+}
+
+#top-pics{
+    height: 100vh;
+    width: 30%;
+    background: rgba(165, 165, 165, 0.304);
+    display: flex;
+    flex-direction: column;
+}
+#top-foods{
+    display: flex;
+    max-width: 100%;
+}
+.top-flex{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+.top-flex p{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: rgba(128, 128, 128, 0.486);
+    border-radius: 10px;
+    font-weight: bolder;
+    padding: 10px;
+    margin: 5px;
+    font-size: 12px;
+}
+.top-pics{
+    height:130px ;
+    width: 130px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    border: 3px solid rgba(255, 94, 0, 0.982);
+    border-radius: 10px;
+}
+#footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    border-top: 10px solid rgba(255, 94, 0, 0.84);
+}
+#contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    width: 30%;
+    margin-top: 20px;
+    margin-left: 20px;
+    
+}
+#link-container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+}
+#wp-img{
+    height: 50px;
+    width: 100px;
+}
+#gmail-img{
+    height: 40px;
+    width: 100px;
+}
+#messege{
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    align-items: center;
+    align-content: center;
+    background: radial-gradient( rgba(91, 244, 249, 0.616),rgb(132, 249, 249));
+    border-radius: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#quote{
+    font-size: larger;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    outline: 1px;
+}
+#heart-emoji{
+    animation-name: grow;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    margin-left: 10px;
+}
+@keyframes grow{
+    0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+      100% {
+        transform: scale(2);
+      }
+}
+#newsletter{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-right: 50px;
+}
+#news-letter-top-container{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    height: 40px;
+}
+#mail-box-icon{
+    height: 13px;
+    width: 18px;
+}
+#quote2{
+    font-family: Agbalumo;
+    font-size: 1.2em;
+    color: rgba(255, 94, 0, 0.982);
+    padding-bottom: 10px;
+}
+#mail-box-icon:hover{
+    animation: vibrate 0.5s 2;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes vibrate {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(9deg);
+    }
+    50% {
+      transform: rotate(-9deg);
+    }
+    75% {
+      transform: rotate(9deg);
+    }
+    100% {
+      transform: rotate(9deg);
+    }
+  }
+  #mail-pad{
+    outline: none;
+    background: transparent;
+    border: 2px solid rgba(255, 94, 0, 0.982);
+    border-radius: 20px;
+    padding: 10px;
+  }
+  #submit-button{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    color: rgba(255, 94, 0, 0.84);
+    background: white;
+    border-color: rgba(255, 94, 0, 0.84);
+    font-size: 16px;
+    font-weight: 800;
+    outline: none;
+  }
+  #submit-button:hover{
+    background: rgba(255, 94, 0, 0.84);
+    color: white;
+  }
